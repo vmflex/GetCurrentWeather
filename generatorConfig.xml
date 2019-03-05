@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <context id="gcwContext">
+     <commentGenerator>
+        <property name="suppressDate" value="true"/>
+        <property name="suppressAllComments" value="true" />
+    </commentGenerator>
+    <jdbcConnection connectionURL="jdbc:h2:~/test" driverClass="org.h2.Driver" password="" userId="sa" />
+    <javaModelGenerator targetPackage="com.pactera.gcw.dao.model" targetProject="GetCurrentWeather/src/main/java" />
+    <sqlMapGenerator targetPackage="com.pactera.gcw.dao.mapper" targetProject="GetCurrentWeather/src/main/java" />
+    <javaClientGenerator targetPackage="com.pactera.gcw.dao.mapper" targetProject="GetCurrentWeather/src/main/java" type="XMLMAPPER" />
+    <table schema="" tableName="gcw_city"></table>
+
+  </context>
+  
+</generatorConfiguration>
