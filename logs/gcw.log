@@ -1,213 +1,399 @@
-2019-03-08 00:26:47.848  INFO 12548 --- [Thread-57] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-03-08 00:26:47.889  INFO 12548 --- [Thread-57] com.alibaba.druid.pool.DruidDataSource   : {dataSource-7} closed
-2019-03-08 00:26:48.215 DEBUG 12548 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : gcw system start...
-2019-03-08 00:26:48.281  INFO 12548 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Starting GetCurrentWeatherApplication on DESKTOP-FA5MHDS with PID 12548 (C:\study\workspace-os\GetCurrentWeather\target\classes started by dac in C:\study\workspace-os\GetCurrentWeather)
-2019-03-08 00:26:48.281 DEBUG 12548 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
-2019-03-08 00:26:48.281  INFO 12548 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : No active profile set, falling back to default profiles: default
-2019-03-08 00:26:49.032  WARN 12548 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pactera.gcw]' package. Please check your configuration.
-2019-03-08 00:26:49.123  INFO 12548 --- [restartedMain] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
-2019-03-08 00:26:49.163  INFO 12548 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'druidDBConfig' of type [com.pactera.gcw.common.DruidDBConfig$$EnhancerBySpringCGLIB$$484bc67a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-08 00:26:49.164  INFO 12548 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'myBatisConfig' of type [com.pactera.gcw.common.MyBatisConfig$$EnhancerBySpringCGLIB$$f5e02c4d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-08 00:26:49.217  INFO 12548 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-8} inited
-2019-03-08 00:26:49.227  INFO 12548 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-08 00:26:49.236  INFO 12548 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-08 00:26:49.238  INFO 12548 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-08 00:26:49.239  INFO 12548 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-08 00:26:49.240  INFO 12548 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b136c6fa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-08 00:26:49.314  INFO 12548 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
-2019-03-08 00:26:49.316  INFO 12548 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-03-08 00:26:49.317  INFO 12548 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
-2019-03-08 00:26:49.366  INFO 12548 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-03-08 00:26:49.366  INFO 12548 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1082 ms
-2019-03-08 00:26:49.686  INFO 12548 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2019-03-08 00:26:49.738  INFO 12548 --- [restartedMain] c.pactera.gcw.common.CitiesInitializer   : Table GCW_CITY is existing.
-2019-03-08 00:26:49.747  INFO 12548 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-03-08 00:26:49.800  INFO 12548 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-03-08 00:26:49.805  INFO 12548 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-03-08 00:26:49.915  INFO 12548 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2019-03-08 00:26:49.923  INFO 12548 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2019-03-08 00:26:49.930  INFO 12548 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2019-03-08 00:26:49.943  INFO 12548 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
-2019-03-08 00:26:49.945  INFO 12548 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Started GetCurrentWeatherApplication in 1.719 seconds (JVM running for 4848.426)
-2019-03-08 00:26:49.948  INFO 12548 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2019-03-08 00:26:52.075  INFO 12548 --- [RMI TCP Connection(1)-192.168.195.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-03-08 00:26:52.082  INFO 12548 --- [RMI TCP Connection(1)-192.168.195.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-03-08 00:26:52.107  INFO 12548 --- [RMI TCP Connection(1)-192.168.195.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 25 ms
-2019-03-08 00:27:19.079 DEBUG 12548 --- [http-nio-8000-exec-2] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
-2019-03-08 00:27:19.088 DEBUG 12548 --- [http-nio-8000-exec-2] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
-2019-03-08 00:27:19.096 DEBUG 12548 --- [http-nio-8000-exec-2] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 3
-2019-03-08 00:27:35.428 DEBUG 12548 --- [http-nio-8000-exec-3] c.p.g.d.m.G.deleteByPrimaryKey           : ==>  Preparing: delete from GCW_CITY where CODE = ? 
-2019-03-08 00:27:35.440 DEBUG 12548 --- [http-nio-8000-exec-3] c.p.g.d.m.G.deleteByPrimaryKey           : ==> Parameters: 101020100(String)
-2019-03-08 00:27:35.441 DEBUG 12548 --- [http-nio-8000-exec-3] c.p.g.d.m.G.deleteByPrimaryKey           : <==    Updates: 1
-2019-03-08 00:27:46.350 DEBUG 12548 --- [http-nio-8000-exec-4] c.p.g.d.m.G.deleteByPrimaryKey           : ==>  Preparing: delete from GCW_CITY where CODE = ? 
-2019-03-08 00:27:46.357 DEBUG 12548 --- [http-nio-8000-exec-4] c.p.g.d.m.G.deleteByPrimaryKey           : ==> Parameters: 101010100(String)
-2019-03-08 00:27:46.365 DEBUG 12548 --- [http-nio-8000-exec-4] c.p.g.d.m.G.deleteByPrimaryKey           : <==    Updates: 1
-2019-03-08 00:27:57.860 DEBUG 12548 --- [http-nio-8000-exec-5] c.p.g.d.m.G.deleteByPrimaryKey           : ==>  Preparing: delete from GCW_CITY where CODE = ? 
-2019-03-08 00:27:57.867 DEBUG 12548 --- [http-nio-8000-exec-5] c.p.g.d.m.G.deleteByPrimaryKey           : ==> Parameters: 101070201(String)
-2019-03-08 00:27:57.868 DEBUG 12548 --- [http-nio-8000-exec-5] c.p.g.d.m.G.deleteByPrimaryKey           : <==    Updates: 1
-2019-03-08 00:28:01.880 DEBUG 12548 --- [http-nio-8000-exec-6] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
-2019-03-08 00:28:01.891 DEBUG 12548 --- [http-nio-8000-exec-6] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
-2019-03-08 00:28:01.897 DEBUG 12548 --- [http-nio-8000-exec-6] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 0
-2019-03-08 00:28:18.159 DEBUG 12548 --- [http-nio-8000-exec-7] c.p.gcw.dao.mapper.GcwCityMapper.insert  : ==>  Preparing: insert into GCW_CITY (CODE, NAME) values (?, ?) 
-2019-03-08 00:28:18.167 DEBUG 12548 --- [http-nio-8000-exec-7] c.p.gcw.dao.mapper.GcwCityMapper.insert  : ==> Parameters: Dalian(String), Dalian(String)
-2019-03-08 00:28:18.168 DEBUG 12548 --- [http-nio-8000-exec-7] c.p.gcw.dao.mapper.GcwCityMapper.insert  : <==    Updates: 1
-2019-03-08 00:28:34.527 DEBUG 12548 --- [http-nio-8000-exec-8] c.p.gcw.dao.mapper.GcwCityMapper.insert  : ==>  Preparing: insert into GCW_CITY (CODE, NAME) values (?, ?) 
-2019-03-08 00:28:34.533 DEBUG 12548 --- [http-nio-8000-exec-8] c.p.gcw.dao.mapper.GcwCityMapper.insert  : ==> Parameters: Beijing(String), Beijing(String)
-2019-03-08 00:28:34.540 DEBUG 12548 --- [http-nio-8000-exec-8] c.p.gcw.dao.mapper.GcwCityMapper.insert  : <==    Updates: 1
-2019-03-08 00:28:43.937 DEBUG 12548 --- [http-nio-8000-exec-9] c.p.gcw.dao.mapper.GcwCityMapper.insert  : ==>  Preparing: insert into GCW_CITY (CODE, NAME) values (?, ?) 
-2019-03-08 00:28:43.946 DEBUG 12548 --- [http-nio-8000-exec-9] c.p.gcw.dao.mapper.GcwCityMapper.insert  : ==> Parameters: Shanghai(String), Shanghai(String)
-2019-03-08 00:28:43.947 DEBUG 12548 --- [http-nio-8000-exec-9] c.p.gcw.dao.mapper.GcwCityMapper.insert  : <==    Updates: 1
-2019-03-08 00:29:55.226 DEBUG 12548 --- [http-nio-8000-exec-1] c.p.gcw.dao.mapper.GcwCityMapper.insert  : ==>  Preparing: insert into GCW_CITY (CODE, NAME) values (?, ?) 
-2019-03-08 00:29:55.232 DEBUG 12548 --- [http-nio-8000-exec-1] c.p.gcw.dao.mapper.GcwCityMapper.insert  : ==> Parameters: Sydney(String), Sydney(String)
-2019-03-08 00:29:55.238 DEBUG 12548 --- [http-nio-8000-exec-1] c.p.gcw.dao.mapper.GcwCityMapper.insert  : <==    Updates: 1
-2019-03-08 00:30:46.884 DEBUG 12548 --- [http-nio-8000-exec-3] c.p.gcw.dao.mapper.GcwCityMapper.insert  : ==>  Preparing: insert into GCW_CITY (CODE, NAME) values (?, ?) 
-2019-03-08 00:30:46.893 DEBUG 12548 --- [http-nio-8000-exec-3] c.p.gcw.dao.mapper.GcwCityMapper.insert  : ==> Parameters: Melbourne(String), Melbourne(String)
-2019-03-08 00:30:46.893 DEBUG 12548 --- [http-nio-8000-exec-3] c.p.gcw.dao.mapper.GcwCityMapper.insert  : <==    Updates: 1
-2019-03-08 00:32:36.489 DEBUG 12548 --- [http-nio-8000-exec-6] c.p.gcw.dao.mapper.GcwCityMapper.insert  : ==>  Preparing: insert into GCW_CITY (CODE, NAME) values (?, ?) 
-2019-03-08 00:32:36.495 DEBUG 12548 --- [http-nio-8000-exec-6] c.p.gcw.dao.mapper.GcwCityMapper.insert  : ==> Parameters: Perth(String), Perth(String)
-2019-03-08 00:32:36.501 DEBUG 12548 --- [http-nio-8000-exec-6] c.p.gcw.dao.mapper.GcwCityMapper.insert  : <==    Updates: 1
-2019-03-08 00:33:54.874  INFO 20852 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Starting GetCurrentWeatherApplication on DESKTOP-FA5MHDS with PID 20852 (C:\study\workspace-os\GetCurrentWeather\target\classes started by dac in C:\study\workspace-os\GetCurrentWeather)
-2019-03-08 00:33:54.877 DEBUG 20852 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
-2019-03-08 00:33:54.878  INFO 20852 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : No active profile set, falling back to default profiles: default
-2019-03-08 00:33:54.925  INFO 20852 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-03-08 00:33:54.926  INFO 20852 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-03-08 00:33:56.227 DEBUG 20852 --- [restartedMain] org.apache.ibatis.logging.LogFactory     : Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
-2019-03-08 00:33:56.251  WARN 20852 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pactera.gcw]' package. Please check your configuration.
-2019-03-08 00:33:56.519  INFO 20852 --- [restartedMain] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
-2019-03-08 00:33:56.930  INFO 20852 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'druidDBConfig' of type [com.pactera.gcw.common.DruidDBConfig$$EnhancerBySpringCGLIB$$d2ca904e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-08 00:33:56.932  INFO 20852 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'myBatisConfig' of type [com.pactera.gcw.common.MyBatisConfig$$EnhancerBySpringCGLIB$$805ef621] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-08 00:33:57.424  INFO 20852 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2019-03-08 00:33:57.431  INFO 20852 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-08 00:33:57.486  INFO 20852 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-08 00:33:57.496  INFO 20852 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-08 00:33:57.509  INFO 20852 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-08 00:33:57.511  INFO 20852 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3bb590ce] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-08 00:33:58.063  INFO 20852 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
-2019-03-08 00:33:58.119  INFO 20852 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-03-08 00:33:58.123  INFO 20852 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
-2019-03-08 00:33:58.149  INFO 20852 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\study\software\jdk-11.0.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/study/software/jdk-11.0.1/bin/server;C:/study/software/jdk-11.0.1/bin;D:\app\dac\product\11.2.0\dbhome_2\bin;C:\study\software\jdk-11.0.1\bin;D:\study\app\oracle\product\12.2.0\dbhome_1\bin;C:\Program Files (x86)\SmartGit\git\cmd;C:\study\maven\apache-maven-3.5.3\bin;C:\study\software\mysql-5.7.19-winx64\bin;C:\study\software\jdk-11.0.1\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\dac\AppData\Roaming\npm;C:\study\software\sts4.0.1\sts-4.0.1.RELEASE;;.]
-2019-03-08 00:33:58.277  INFO 20852 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-03-08 00:33:58.277  INFO 20852 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3351 ms
-2019-03-08 00:33:59.502  INFO 20852 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2019-03-08 00:33:59.608  INFO 20852 --- [restartedMain] c.pactera.gcw.common.CitiesInitializer   : Table GCW_CITY is existing.
-2019-03-08 00:33:59.640  INFO 20852 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-03-08 00:33:59.860  INFO 20852 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-03-08 00:33:59.891  INFO 20852 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-03-08 00:34:00.210  INFO 20852 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2019-03-08 00:34:00.239  INFO 20852 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2019-03-08 00:34:00.271  INFO 20852 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2019-03-08 00:34:00.324  INFO 20852 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
-2019-03-08 00:34:00.328  INFO 20852 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Started GetCurrentWeatherApplication in 5.939 seconds (JVM running for 6.535)
-2019-03-08 00:34:07.238  INFO 20852 --- [RMI TCP Connection(1)-192.168.195.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-03-08 00:34:07.258  INFO 20852 --- [RMI TCP Connection(1)-192.168.195.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-03-08 00:34:07.276  INFO 20852 --- [RMI TCP Connection(1)-192.168.195.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
-2019-03-08 00:34:49.912  INFO 20852 --- [Thread-7] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-03-08 00:34:49.942  INFO 20852 --- [Thread-7] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2019-03-08 00:34:50.233 DEBUG 20852 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : gcw system start...
-2019-03-08 00:34:50.286  INFO 20852 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Starting GetCurrentWeatherApplication on DESKTOP-FA5MHDS with PID 20852 (C:\study\workspace-os\GetCurrentWeather\target\classes started by dac in C:\study\workspace-os\GetCurrentWeather)
-2019-03-08 00:34:50.286 DEBUG 20852 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
-2019-03-08 00:34:50.286  INFO 20852 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : No active profile set, falling back to default profiles: default
-2019-03-08 00:34:50.891  WARN 20852 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pactera.gcw]' package. Please check your configuration.
-2019-03-08 00:34:50.989  INFO 20852 --- [restartedMain] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
-2019-03-08 00:34:51.024  INFO 20852 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'druidDBConfig' of type [com.pactera.gcw.common.DruidDBConfig$$EnhancerBySpringCGLIB$$d2ca904e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-08 00:34:51.025  INFO 20852 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'myBatisConfig' of type [com.pactera.gcw.common.MyBatisConfig$$EnhancerBySpringCGLIB$$805ef621] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-08 00:34:51.047  INFO 20852 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
-2019-03-08 00:34:51.048  INFO 20852 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-08 00:34:51.058  INFO 20852 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-08 00:34:51.061  INFO 20852 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-08 00:34:51.061  INFO 20852 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-08 00:34:51.062  INFO 20852 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3bb590ce] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-08 00:34:51.124  INFO 20852 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
-2019-03-08 00:34:51.131  INFO 20852 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-03-08 00:34:51.135  INFO 20852 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
-2019-03-08 00:34:51.173  INFO 20852 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-03-08 00:34:51.173  INFO 20852 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 884 ms
-2019-03-08 00:34:51.462  INFO 20852 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2019-03-08 00:34:51.498  INFO 20852 --- [restartedMain] c.pactera.gcw.common.CitiesInitializer   : Table GCW_CITY is existing.
-2019-03-08 00:34:51.509  INFO 20852 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-03-08 00:34:51.565  INFO 20852 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-03-08 00:34:51.574  INFO 20852 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-03-08 00:34:51.687  INFO 20852 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2019-03-08 00:34:51.694  INFO 20852 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2019-03-08 00:34:51.701  INFO 20852 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2019-03-08 00:34:51.711  INFO 20852 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
-2019-03-08 00:34:51.712  INFO 20852 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Started GetCurrentWeatherApplication in 1.471 seconds (JVM running for 57.919)
-2019-03-08 00:34:51.718  INFO 20852 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2019-03-08 00:34:52.072  INFO 20852 --- [RMI TCP Connection(1)-192.168.195.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-03-08 00:34:52.072  INFO 20852 --- [RMI TCP Connection(1)-192.168.195.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-03-08 00:34:52.076  INFO 20852 --- [RMI TCP Connection(1)-192.168.195.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2019-03-08 00:43:51.181 ERROR 20852 --- [http-nio-8000-exec-4] c.pactera.gcw.service.GetWeatherService  : Fail to get Weather info from http://api.apixu.com/v1/current.json?key=b8ff99e79c9340d79fa161843190703&q=
-
-java.io.IOException: Server returned HTTP response code: 400 for URL: http://api.apixu.com/v1/current.json?key=b8ff99e79c9340d79fa161843190703&q=afafsadf
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1913) ~[na:na]
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1509) ~[na:na]
-	at java.base/java.net.URL.openStream(URL.java:1117) ~[na:na]
-	at com.pactera.gcw.service.GetWeatherService.getWeather(GetWeatherService.java:37) ~[classes/:na]
-	at com.pactera.gcw.controller.GetWeatherController.getWeatherInfo(GetWeatherController.java:23) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.16.jar:9.0.16]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:90) ~[spring-boot-actuator-2.1.3.RELEASE.jar:2.1.3.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.filterAndRecordMetrics(WebMvcMetricsFilter.java:117) ~[spring-boot-actuator-2.1.3.RELEASE.jar:2.1.3.RELEASE]
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:106) ~[spring-boot-actuator-2.1.3.RELEASE.jar:2.1.3.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-
-2019-03-08 00:45:20.864 DEBUG 20852 --- [http-nio-8000-exec-8] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
-2019-03-08 00:45:20.893 DEBUG 20852 --- [http-nio-8000-exec-8] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
-2019-03-08 00:45:20.912 DEBUG 20852 --- [http-nio-8000-exec-8] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 07:57:05.846  INFO 11556 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Starting GetCurrentWeatherApplication on DESKTOP-FA5MHDS with PID 11556 (C:\study\workspace-os\GetCurrentWeather\target\classes started by dac in C:\study\workspace-os\GetCurrentWeather)
+2019-03-10 07:57:05.851 DEBUG 11556 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-10 07:57:05.852  INFO 11556 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : No active profile set, falling back to default profiles: default
+2019-03-10 07:57:05.909  INFO 11556 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-03-10 07:57:05.910  INFO 11556 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-03-10 07:57:07.573 DEBUG 11556 --- [restartedMain] org.apache.ibatis.logging.LogFactory     : Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-03-10 07:57:07.592  WARN 11556 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pactera.gcw]' package. Please check your configuration.
+2019-03-10 07:57:07.832  INFO 11556 --- [restartedMain] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-03-10 07:57:08.162  INFO 11556 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'druidDBConfig' of type [com.pactera.gcw.common.DruidDBConfig$$EnhancerBySpringCGLIB$$f899a8d5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 07:57:08.162  INFO 11556 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'myBatisConfig' of type [com.pactera.gcw.common.MyBatisConfig$$EnhancerBySpringCGLIB$$a62e0ea8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 07:57:08.617  INFO 11556 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-10 07:57:08.629  INFO 11556 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 07:57:08.660  INFO 11556 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 07:57:08.660  INFO 11556 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 07:57:08.660  INFO 11556 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 07:57:08.675  INFO 11556 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6184a955] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 07:57:09.446  INFO 11556 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2019-03-10 07:57:09.513  INFO 11556 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-10 07:57:09.515  INFO 11556 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-10 07:57:09.528  INFO 11556 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\study\software\jdk-11.0.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/study/software/jdk-11.0.1/bin/server;C:/study/software/jdk-11.0.1/bin;D:\app\dac\product\11.2.0\dbhome_2\bin;C:\study\software\jdk-11.0.1\bin;D:\study\app\oracle\product\12.2.0\dbhome_1\bin;C:\Program Files (x86)\SmartGit\git\cmd;C:\study\maven\apache-maven-3.5.3\bin;C:\study\software\mysql-5.7.19-winx64\bin;C:\study\software\jdk-11.0.1\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\dac\AppData\Roaming\npm;C:\study\software\sts4.0.1\sts-4.0.1.RELEASE;;.]
+2019-03-10 07:57:09.678  INFO 11556 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-10 07:57:09.685  INFO 11556 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3775 ms
+2019-03-10 07:57:11.118  INFO 11556 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-03-10 07:57:11.224  INFO 11556 --- [restartedMain] c.pactera.gcw.common.CitiesInitializer   : Table GCW_CITY is existing.
+2019-03-10 07:57:11.252  INFO 11556 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-03-10 07:57:11.517  INFO 11556 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-10 07:57:11.539  INFO 11556 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-03-10 07:57:11.614  INFO 11556 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: ServletContext resource [/index.html]
+2019-03-10 07:57:11.827  INFO 11556 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-03-10 07:57:11.858  INFO 11556 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-03-10 07:57:11.889  INFO 11556 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-03-10 07:57:11.936  INFO 11556 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2019-03-10 07:57:11.936  INFO 11556 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Started GetCurrentWeatherApplication in 6.639 seconds (JVM running for 7.188)
+2019-03-10 07:57:19.758  INFO 11556 --- [RMI TCP Connection(1)-192.168.195.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-10 07:57:19.778  INFO 11556 --- [RMI TCP Connection(1)-192.168.195.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-10 07:57:19.792  INFO 11556 --- [RMI TCP Connection(1)-192.168.195.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-03-10 07:57:24.103 DEBUG 11556 --- [http-nio-8000-exec-1] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 07:57:24.136 DEBUG 11556 --- [http-nio-8000-exec-1] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 07:57:24.154 DEBUG 11556 --- [http-nio-8000-exec-1] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:03:53.075 DEBUG 11556 --- [http-nio-8000-exec-9] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:03:53.088 DEBUG 11556 --- [http-nio-8000-exec-9] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:03:53.097 DEBUG 11556 --- [http-nio-8000-exec-9] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:05:05.811 DEBUG 11556 --- [http-nio-8000-exec-5] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:05:05.823 DEBUG 11556 --- [http-nio-8000-exec-5] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:05:05.826 DEBUG 11556 --- [http-nio-8000-exec-5] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:06:57.043 DEBUG 11556 --- [http-nio-8000-exec-1] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:06:57.056 DEBUG 11556 --- [http-nio-8000-exec-1] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:06:57.067 DEBUG 11556 --- [http-nio-8000-exec-1] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:08:58.929 DEBUG 11556 --- [http-nio-8000-exec-6] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:08:58.943 DEBUG 11556 --- [http-nio-8000-exec-6] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:08:58.945 DEBUG 11556 --- [http-nio-8000-exec-6] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:09:43.506 DEBUG 11556 --- [http-nio-8000-exec-10] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:09:43.520 DEBUG 11556 --- [http-nio-8000-exec-10] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:09:43.531 DEBUG 11556 --- [http-nio-8000-exec-10] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:12:37.112 DEBUG 11556 --- [http-nio-8000-exec-4] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:12:37.122 DEBUG 11556 --- [http-nio-8000-exec-4] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:12:37.124 DEBUG 11556 --- [http-nio-8000-exec-4] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:14:22.095 DEBUG 11556 --- [http-nio-8000-exec-9] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:14:22.111 DEBUG 11556 --- [http-nio-8000-exec-9] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:14:22.122 DEBUG 11556 --- [http-nio-8000-exec-9] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:15:11.217 DEBUG 11556 --- [http-nio-8000-exec-6] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:15:11.231 DEBUG 11556 --- [http-nio-8000-exec-6] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:15:11.233 DEBUG 11556 --- [http-nio-8000-exec-6] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:15:30.456 DEBUG 11556 --- [http-nio-8000-exec-8] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:15:30.465 DEBUG 11556 --- [http-nio-8000-exec-8] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:15:30.475 DEBUG 11556 --- [http-nio-8000-exec-8] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:15:30.869 DEBUG 11556 --- [http-nio-8000-exec-1] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:15:30.879 DEBUG 11556 --- [http-nio-8000-exec-1] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:15:30.881 DEBUG 11556 --- [http-nio-8000-exec-1] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:15:31.055 DEBUG 11556 --- [http-nio-8000-exec-7] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:15:31.055 DEBUG 11556 --- [http-nio-8000-exec-7] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:15:31.057 DEBUG 11556 --- [http-nio-8000-exec-7] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:15:31.228 DEBUG 11556 --- [http-nio-8000-exec-2] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:15:31.241 DEBUG 11556 --- [http-nio-8000-exec-2] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:15:31.242 DEBUG 11556 --- [http-nio-8000-exec-2] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:26:44.087 DEBUG 11556 --- [http-nio-8000-exec-8] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:26:44.102 DEBUG 11556 --- [http-nio-8000-exec-8] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:26:44.108 DEBUG 11556 --- [http-nio-8000-exec-8] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:28:11.299 DEBUG 11556 --- [http-nio-8000-exec-7] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:28:11.306 DEBUG 11556 --- [http-nio-8000-exec-7] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:28:11.309 DEBUG 11556 --- [http-nio-8000-exec-7] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:28:43.197 DEBUG 11556 --- [http-nio-8000-exec-1] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:28:43.208 DEBUG 11556 --- [http-nio-8000-exec-1] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:28:43.218 DEBUG 11556 --- [http-nio-8000-exec-1] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:28:44.315 DEBUG 11556 --- [http-nio-8000-exec-5] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:28:44.326 DEBUG 11556 --- [http-nio-8000-exec-5] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:28:44.328 DEBUG 11556 --- [http-nio-8000-exec-5] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:29:27.807 DEBUG 11556 --- [http-nio-8000-exec-2] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:29:27.815 DEBUG 11556 --- [http-nio-8000-exec-2] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:29:27.825 DEBUG 11556 --- [http-nio-8000-exec-2] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:30:39.658 DEBUG 11556 --- [http-nio-8000-exec-7] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:30:39.665 DEBUG 11556 --- [http-nio-8000-exec-7] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:30:39.666 DEBUG 11556 --- [http-nio-8000-exec-7] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:30:40.329 DEBUG 11556 --- [http-nio-8000-exec-2] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:30:40.329 DEBUG 11556 --- [http-nio-8000-exec-2] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:30:40.331 DEBUG 11556 --- [http-nio-8000-exec-2] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:30:40.552 DEBUG 11556 --- [http-nio-8000-exec-10] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:30:40.562 DEBUG 11556 --- [http-nio-8000-exec-10] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:30:40.563 DEBUG 11556 --- [http-nio-8000-exec-10] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:30:40.744 DEBUG 11556 --- [http-nio-8000-exec-8] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:30:40.744 DEBUG 11556 --- [http-nio-8000-exec-8] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:30:40.758 DEBUG 11556 --- [http-nio-8000-exec-8] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:30:40.925 DEBUG 11556 --- [http-nio-8000-exec-4] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:30:40.925 DEBUG 11556 --- [http-nio-8000-exec-4] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:30:40.926 DEBUG 11556 --- [http-nio-8000-exec-4] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:30:41.120 DEBUG 11556 --- [http-nio-8000-exec-9] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:30:41.121 DEBUG 11556 --- [http-nio-8000-exec-9] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:30:41.125 DEBUG 11556 --- [http-nio-8000-exec-9] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:30:41.280 DEBUG 11556 --- [http-nio-8000-exec-2] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:30:41.290 DEBUG 11556 --- [http-nio-8000-exec-2] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:30:41.292 DEBUG 11556 --- [http-nio-8000-exec-2] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:31:13.526 DEBUG 11556 --- [http-nio-8000-exec-5] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:31:13.537 DEBUG 11556 --- [http-nio-8000-exec-5] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:31:13.546 DEBUG 11556 --- [http-nio-8000-exec-5] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:31:14.331 DEBUG 11556 --- [http-nio-8000-exec-3] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:31:14.338 DEBUG 11556 --- [http-nio-8000-exec-3] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:31:14.341 DEBUG 11556 --- [http-nio-8000-exec-3] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:31:51.580 DEBUG 11556 --- [http-nio-8000-exec-4] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:31:51.589 DEBUG 11556 --- [http-nio-8000-exec-4] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:31:51.598 DEBUG 11556 --- [http-nio-8000-exec-4] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:31:52.553 DEBUG 11556 --- [http-nio-8000-exec-7] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:31:52.564 DEBUG 11556 --- [http-nio-8000-exec-7] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:31:52.565 DEBUG 11556 --- [http-nio-8000-exec-7] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:31:52.768 DEBUG 11556 --- [http-nio-8000-exec-1] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:31:52.768 DEBUG 11556 --- [http-nio-8000-exec-1] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:31:52.780 DEBUG 11556 --- [http-nio-8000-exec-1] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:32:02.385 DEBUG 11556 --- [http-nio-8000-exec-5] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:32:02.397 DEBUG 11556 --- [http-nio-8000-exec-5] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:32:02.408 DEBUG 11556 --- [http-nio-8000-exec-5] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:33:41.987 DEBUG 11556 --- [http-nio-8000-exec-10] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:33:41.997 DEBUG 11556 --- [http-nio-8000-exec-10] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:33:42.004 DEBUG 11556 --- [http-nio-8000-exec-10] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:36:10.157 DEBUG 11556 --- [http-nio-8000-exec-2] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:36:10.165 DEBUG 11556 --- [http-nio-8000-exec-2] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:36:10.166 DEBUG 11556 --- [http-nio-8000-exec-2] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 08:36:31.188 DEBUG 11556 --- [http-nio-8000-exec-8] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 08:36:31.203 DEBUG 11556 --- [http-nio-8000-exec-8] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 08:36:31.210 DEBUG 11556 --- [http-nio-8000-exec-8] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 22:22:11.517  INFO 7972 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Starting GetCurrentWeatherApplication on DESKTOP-FA5MHDS with PID 7972 (C:\study\workspace-os\GetCurrentWeather\target\classes started by dac in C:\study\workspace-os\GetCurrentWeather)
+2019-03-10 22:22:11.519 DEBUG 7972 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-10 22:22:11.521  INFO 7972 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : No active profile set, falling back to default profiles: default
+2019-03-10 22:22:11.709  INFO 7972 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-03-10 22:22:11.709  INFO 7972 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-03-10 22:22:15.821 DEBUG 7972 --- [restartedMain] org.apache.ibatis.logging.LogFactory     : Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-03-10 22:22:15.868  WARN 7972 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pactera.gcw]' package. Please check your configuration.
+2019-03-10 22:22:16.523  INFO 7972 --- [restartedMain] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-03-10 22:22:17.222  INFO 7972 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'druidDBConfig' of type [com.pactera.gcw.common.DruidDBConfig$$EnhancerBySpringCGLIB$$6822dd90] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:22:17.225  INFO 7972 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'myBatisConfig' of type [com.pactera.gcw.common.MyBatisConfig$$EnhancerBySpringCGLIB$$15b74363] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:22:17.956  INFO 7972 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-10 22:22:17.978  INFO 7972 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:22:18.057  INFO 7972 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:22:18.070  INFO 7972 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:22:18.088  INFO 7972 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:22:18.094  INFO 7972 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d10dde10] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:22:19.382  INFO 7972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2019-03-10 22:22:19.507  INFO 7972 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-10 22:22:19.561  INFO 7972 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-10 22:22:19.583  INFO 7972 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\study\software\jdk-11.0.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/study/software/jdk1.8-old/bin/../jre/bin/server;C:/study/software/jdk1.8-old/bin/../jre/bin;C:/study/software/jdk1.8-old/bin/../jre/lib/amd64;D:\app\dac\product\11.2.0\dbhome_2\bin;C:\study\software\jdk1.8-old\bin;D:\study\app\oracle\product\12.2.0\dbhome_1\bin;C:\Program Files (x86)\SmartGit\git\cmd;C:\study\maven\apache-maven-3.5.3\bin;C:\study\software\mysql-5.7.19-winx64\bin;C:\study\software\jdk1.8-old\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;C:\Users\dac\AppData\Roaming\npm;C:\study\software\sts4.0.1\sts-4.0.1.RELEASE;;.]
+2019-03-10 22:22:19.920  INFO 7972 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-10 22:22:19.920  INFO 7972 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 8210 ms
+2019-03-10 22:22:22.057  INFO 7972 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-03-10 22:22:22.306  INFO 7972 --- [restartedMain] c.pactera.gcw.common.CitiesInitializer   : Table GCW_CITY is existing.
+2019-03-10 22:22:22.367  INFO 7972 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-03-10 22:22:22.898  INFO 7972 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-10 22:22:22.981  INFO 7972 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-03-10 22:22:23.168  INFO 7972 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: ServletContext resource [/index.html]
+2019-03-10 22:22:23.733  INFO 7972 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-03-10 22:22:23.791  INFO 7972 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-03-10 22:22:23.897  INFO 7972 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-03-10 22:22:24.017  INFO 7972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2019-03-10 22:22:24.047  INFO 7972 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Started GetCurrentWeatherApplication in 13.427 seconds (JVM running for 23.354)
+2019-03-10 22:22:41.705  INFO 7972 --- [http-nio-8000-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-10 22:22:41.716  INFO 7972 --- [http-nio-8000-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-10 22:22:41.727  INFO 7972 --- [http-nio-8000-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-03-10 22:22:41.888 DEBUG 7972 --- [http-nio-8000-exec-4] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 22:22:41.925 DEBUG 7972 --- [http-nio-8000-exec-4] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 22:22:41.970 DEBUG 7972 --- [http-nio-8000-exec-4] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 22:22:46.261 DEBUG 7972 --- [http-nio-8000-exec-9] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 22:22:46.269 DEBUG 7972 --- [http-nio-8000-exec-9] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 22:22:46.272 DEBUG 7972 --- [http-nio-8000-exec-9] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 22:26:25.512  INFO 7972 --- [Thread-7] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-10 22:26:25.528  INFO 7972 --- [Thread-7] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2019-03-10 22:26:25.875 DEBUG 7972 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : gcw system start...
+2019-03-10 22:26:25.937  INFO 7972 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Starting GetCurrentWeatherApplication on DESKTOP-FA5MHDS with PID 7972 (C:\study\workspace-os\GetCurrentWeather\target\classes started by dac in C:\study\workspace-os\GetCurrentWeather)
+2019-03-10 22:26:25.938 DEBUG 7972 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-10 22:26:25.939  INFO 7972 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : No active profile set, falling back to default profiles: default
+2019-03-10 22:26:27.059  WARN 7972 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pactera.gcw]' package. Please check your configuration.
+2019-03-10 22:26:27.241  INFO 7972 --- [restartedMain] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-03-10 22:26:27.300  INFO 7972 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'druidDBConfig' of type [com.pactera.gcw.common.DruidDBConfig$$EnhancerBySpringCGLIB$$6822dd90] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:26:27.305  INFO 7972 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'myBatisConfig' of type [com.pactera.gcw.common.MyBatisConfig$$EnhancerBySpringCGLIB$$15b74363] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:26:27.362  INFO 7972 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2019-03-10 22:26:27.369  INFO 7972 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:26:27.381  INFO 7972 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:26:27.384  INFO 7972 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:26:27.385  INFO 7972 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:26:27.391  INFO 7972 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d10dde10] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:26:27.504  INFO 7972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2019-03-10 22:26:27.508  INFO 7972 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-10 22:26:27.510  INFO 7972 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-10 22:26:27.589  INFO 7972 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-10 22:26:27.590  INFO 7972 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1647 ms
+2019-03-10 22:26:28.615  INFO 7972 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-03-10 22:26:28.669  INFO 7972 --- [restartedMain] c.pactera.gcw.common.CitiesInitializer   : Table GCW_CITY is existing.
+2019-03-10 22:26:28.736  INFO 7972 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-03-10 22:26:28.826  INFO 7972 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-10 22:26:28.888  INFO 7972 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-03-10 22:26:28.938  INFO 7972 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: ServletContext resource [/index.html]
+2019-03-10 22:26:29.147  INFO 7972 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-03-10 22:26:29.149  INFO 7972 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-03-10 22:26:29.156  INFO 7972 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-03-10 22:26:29.175  INFO 7972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2019-03-10 22:26:29.186  INFO 7972 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Started GetCurrentWeatherApplication in 3.304 seconds (JVM running for 268.493)
+2019-03-10 22:26:29.190  INFO 7972 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-03-10 22:27:09.072  INFO 7972 --- [Thread-12] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-10 22:27:09.084  INFO 7972 --- [Thread-12] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
+2019-03-10 22:27:09.338 DEBUG 7972 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : gcw system start...
+2019-03-10 22:27:09.388  INFO 7972 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Starting GetCurrentWeatherApplication on DESKTOP-FA5MHDS with PID 7972 (C:\study\workspace-os\GetCurrentWeather\target\classes started by dac in C:\study\workspace-os\GetCurrentWeather)
+2019-03-10 22:27:09.388 DEBUG 7972 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-10 22:27:09.388  INFO 7972 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : No active profile set, falling back to default profiles: default
+2019-03-10 22:27:09.989  WARN 7972 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pactera.gcw]' package. Please check your configuration.
+2019-03-10 22:27:10.089  INFO 7972 --- [restartedMain] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-03-10 22:27:10.126  INFO 7972 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'druidDBConfig' of type [com.pactera.gcw.common.DruidDBConfig$$EnhancerBySpringCGLIB$$6822dd90] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:27:10.127  INFO 7972 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'myBatisConfig' of type [com.pactera.gcw.common.MyBatisConfig$$EnhancerBySpringCGLIB$$15b74363] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:27:10.153  INFO 7972 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} inited
+2019-03-10 22:27:10.154  INFO 7972 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:27:10.168  INFO 7972 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:27:10.172  INFO 7972 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:27:10.183  INFO 7972 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:27:10.201  INFO 7972 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d10dde10] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:27:10.288  INFO 7972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2019-03-10 22:27:10.290  INFO 7972 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-10 22:27:10.291  INFO 7972 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-10 22:27:10.336  INFO 7972 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-10 22:27:10.336  INFO 7972 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 946 ms
+2019-03-10 22:27:10.666  INFO 7972 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-03-10 22:27:10.721  INFO 7972 --- [restartedMain] c.pactera.gcw.common.CitiesInitializer   : Table GCW_CITY is existing.
+2019-03-10 22:27:10.731  INFO 7972 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-03-10 22:27:10.838  INFO 7972 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-10 22:27:10.844  INFO 7972 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-03-10 22:27:10.891  INFO 7972 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: ServletContext resource [/index.html]
+2019-03-10 22:27:11.024  INFO 7972 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-03-10 22:27:11.026  INFO 7972 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-03-10 22:27:11.035  INFO 7972 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-03-10 22:27:11.331  INFO 7972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2019-03-10 22:27:11.335  INFO 7972 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Started GetCurrentWeatherApplication in 1.991 seconds (JVM running for 310.642)
+2019-03-10 22:27:11.340  INFO 7972 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-03-10 22:49:43.114  INFO 10716 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Starting GetCurrentWeatherApplication on DESKTOP-FA5MHDS with PID 10716 (C:\study\workspace-os\GetCurrentWeather\target\classes started by dac in C:\study\workspace-os\GetCurrentWeather)
+2019-03-10 22:49:43.115 DEBUG 10716 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-10 22:49:43.118  INFO 10716 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : No active profile set, falling back to default profiles: default
+2019-03-10 22:49:43.195  INFO 10716 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-03-10 22:49:43.195  INFO 10716 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-03-10 22:49:45.025 DEBUG 10716 --- [restartedMain] org.apache.ibatis.logging.LogFactory     : Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-03-10 22:49:45.050  WARN 10716 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pactera.gcw]' package. Please check your configuration.
+2019-03-10 22:49:45.422  INFO 10716 --- [restartedMain] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-03-10 22:49:45.876  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'druidDBConfig' of type [com.pactera.gcw.common.DruidDBConfig$$EnhancerBySpringCGLIB$$5364e3fa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:49:45.878  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'myBatisConfig' of type [com.pactera.gcw.common.MyBatisConfig$$EnhancerBySpringCGLIB$$f949cd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:49:46.338  INFO 10716 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-10 22:49:46.347  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:49:46.404  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:49:46.436  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:49:46.451  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:49:46.455  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bc4fe47a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:49:47.166  INFO 10716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2019-03-10 22:49:47.214  INFO 10716 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-10 22:49:47.215  INFO 10716 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-10 22:49:47.237  INFO 10716 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\study\software\jdk-11.0.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/study/software/jdk1.8-old/bin/../jre/bin/server;C:/study/software/jdk1.8-old/bin/../jre/bin;C:/study/software/jdk1.8-old/bin/../jre/lib/amd64;D:\app\dac\product\11.2.0\dbhome_2\bin;C:\study\software\jdk1.8-old\bin;D:\study\app\oracle\product\12.2.0\dbhome_1\bin;C:\Program Files (x86)\SmartGit\git\cmd;C:\study\maven\apache-maven-3.5.3\bin;C:\study\software\mysql-5.7.19-winx64\bin;C:\study\software\jdk1.8-old\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;C:\Users\dac\AppData\Roaming\npm;C:\study\software\sts4.0.1\sts-4.0.1.RELEASE;;.]
+2019-03-10 22:49:47.477  INFO 10716 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-10 22:49:47.486  INFO 10716 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4291 ms
+2019-03-10 22:49:48.842  INFO 10716 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-03-10 22:49:49.051  INFO 10716 --- [restartedMain] c.pactera.gcw.common.CitiesInitializer   : Table GCW_CITY is existing.
+2019-03-10 22:49:49.092  INFO 10716 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-03-10 22:49:49.448  INFO 10716 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-10 22:49:49.490  INFO 10716 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-03-10 22:49:49.592  INFO 10716 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: ServletContext resource [/index.html]
+2019-03-10 22:49:49.880  INFO 10716 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-03-10 22:49:49.907  INFO 10716 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-03-10 22:49:49.966  INFO 10716 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-03-10 22:49:50.221  INFO 10716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2019-03-10 22:49:50.233  INFO 10716 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Started GetCurrentWeatherApplication in 7.664 seconds (JVM running for 8.241)
+2019-03-10 22:50:08.212  INFO 10716 --- [http-nio-8000-exec-10] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-10 22:50:08.222  INFO 10716 --- [http-nio-8000-exec-10] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-10 22:50:08.231  INFO 10716 --- [http-nio-8000-exec-10] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2019-03-10 22:52:47.214 DEBUG 10716 --- [http-nio-8000-exec-7] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 22:52:47.257 DEBUG 10716 --- [http-nio-8000-exec-7] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 22:52:47.288 DEBUG 10716 --- [http-nio-8000-exec-7] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 6
+2019-03-10 22:54:31.853  INFO 10716 --- [Thread-7] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-10 22:54:31.877  INFO 10716 --- [Thread-7] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2019-03-10 22:54:32.331 DEBUG 10716 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : gcw system start...
+2019-03-10 22:54:32.388  INFO 10716 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Starting GetCurrentWeatherApplication on DESKTOP-FA5MHDS with PID 10716 (C:\study\workspace-os\GetCurrentWeather\target\classes started by dac in C:\study\workspace-os\GetCurrentWeather)
+2019-03-10 22:54:32.389 DEBUG 10716 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-10 22:54:32.391  INFO 10716 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : No active profile set, falling back to default profiles: default
+2019-03-10 22:54:33.249  WARN 10716 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pactera.gcw]' package. Please check your configuration.
+2019-03-10 22:54:33.415  INFO 10716 --- [restartedMain] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-03-10 22:54:33.459  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'druidDBConfig' of type [com.pactera.gcw.common.DruidDBConfig$$EnhancerBySpringCGLIB$$5364e3fa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:54:33.460  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'myBatisConfig' of type [com.pactera.gcw.common.MyBatisConfig$$EnhancerBySpringCGLIB$$f949cd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:54:33.482  INFO 10716 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2019-03-10 22:54:33.490  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:54:33.506  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:54:33.510  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:54:33.512  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:54:33.521  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bc4fe47a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 22:54:33.618  INFO 10716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2019-03-10 22:54:33.623  INFO 10716 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-10 22:54:33.624  INFO 10716 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-10 22:54:33.680  INFO 10716 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-10 22:54:33.682  INFO 10716 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1289 ms
+2019-03-10 22:54:34.130  INFO 10716 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-03-10 22:54:34.182  INFO 10716 --- [restartedMain] c.pactera.gcw.common.CitiesInitializer   : Table GCW_CITY is existing.
+2019-03-10 22:54:34.196  INFO 10716 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-03-10 22:54:34.258  INFO 10716 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-10 22:54:34.268  INFO 10716 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-03-10 22:54:34.293  INFO 10716 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: ServletContext resource [/index.html]
+2019-03-10 22:54:34.420  INFO 10716 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-03-10 22:54:34.422  INFO 10716 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-03-10 22:54:34.430  INFO 10716 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-03-10 22:54:34.496  INFO 10716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2019-03-10 22:54:34.497  INFO 10716 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Started GetCurrentWeatherApplication in 2.154 seconds (JVM running for 292.505)
+2019-03-10 22:54:34.503  INFO 10716 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-03-10 22:54:44.791  INFO 10716 --- [http-nio-8000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-10 22:54:44.800  INFO 10716 --- [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-10 22:54:44.813  INFO 10716 --- [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-03-10 23:00:01.862  INFO 10716 --- [Thread-12] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-10 23:00:01.873  INFO 10716 --- [Thread-12] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
+2019-03-10 23:00:02.132 DEBUG 10716 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : gcw system start...
+2019-03-10 23:00:02.196  INFO 10716 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Starting GetCurrentWeatherApplication on DESKTOP-FA5MHDS with PID 10716 (C:\study\workspace-os\GetCurrentWeather\target\classes started by dac in C:\study\workspace-os\GetCurrentWeather)
+2019-03-10 23:00:02.197 DEBUG 10716 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-10 23:00:02.199  INFO 10716 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : No active profile set, falling back to default profiles: default
+2019-03-10 23:00:03.002  WARN 10716 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pactera.gcw]' package. Please check your configuration.
+2019-03-10 23:00:03.252  INFO 10716 --- [restartedMain] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-03-10 23:00:03.318  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'druidDBConfig' of type [com.pactera.gcw.common.DruidDBConfig$$EnhancerBySpringCGLIB$$5364e3fa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 23:00:03.318  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'myBatisConfig' of type [com.pactera.gcw.common.MyBatisConfig$$EnhancerBySpringCGLIB$$f949cd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 23:00:03.379  INFO 10716 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} inited
+2019-03-10 23:00:03.395  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 23:00:03.407  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 23:00:03.412  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 23:00:03.412  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 23:00:03.419  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bc4fe47a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 23:00:03.508  INFO 10716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2019-03-10 23:00:03.510  INFO 10716 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-10 23:00:03.512  INFO 10716 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-10 23:00:03.572  INFO 10716 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-10 23:00:03.572  INFO 10716 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1367 ms
+2019-03-10 23:00:03.912  INFO 10716 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-03-10 23:00:03.966  INFO 10716 --- [restartedMain] c.pactera.gcw.common.CitiesInitializer   : Table GCW_CITY is existing.
+2019-03-10 23:00:03.977  INFO 10716 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-03-10 23:00:04.030  INFO 10716 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-10 23:00:04.038  INFO 10716 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-03-10 23:00:04.059  INFO 10716 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: ServletContext resource [/index.html]
+2019-03-10 23:00:04.233  INFO 10716 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-03-10 23:00:04.236  INFO 10716 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-03-10 23:00:04.245  INFO 10716 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-03-10 23:00:04.303  INFO 10716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2019-03-10 23:00:04.304  INFO 10716 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Started GetCurrentWeatherApplication in 2.161 seconds (JVM running for 622.311)
+2019-03-10 23:00:04.308  INFO 10716 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-03-10 23:00:11.034  INFO 10716 --- [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-10 23:00:11.043  INFO 10716 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-10 23:00:11.055  INFO 10716 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2019-03-10 23:00:25.870  INFO 10716 --- [Thread-20] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-10 23:00:25.879  INFO 10716 --- [Thread-20] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} closed
+2019-03-10 23:00:26.142 DEBUG 10716 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : gcw system start...
+2019-03-10 23:00:26.201  INFO 10716 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Starting GetCurrentWeatherApplication on DESKTOP-FA5MHDS with PID 10716 (C:\study\workspace-os\GetCurrentWeather\target\classes started by dac in C:\study\workspace-os\GetCurrentWeather)
+2019-03-10 23:00:26.203 DEBUG 10716 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-10 23:00:26.205  INFO 10716 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : No active profile set, falling back to default profiles: default
+2019-03-10 23:00:26.818  WARN 10716 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pactera.gcw]' package. Please check your configuration.
+2019-03-10 23:00:26.917  INFO 10716 --- [restartedMain] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-03-10 23:00:26.960  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'druidDBConfig' of type [com.pactera.gcw.common.DruidDBConfig$$EnhancerBySpringCGLIB$$5364e3fa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 23:00:26.962  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'myBatisConfig' of type [com.pactera.gcw.common.MyBatisConfig$$EnhancerBySpringCGLIB$$f949cd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 23:00:26.995  INFO 10716 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-4} inited
+2019-03-10 23:00:27.009  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 23:00:27.025  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 23:00:27.028  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 23:00:27.029  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 23:00:27.040  INFO 10716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bc4fe47a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-10 23:00:27.126  INFO 10716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2019-03-10 23:00:27.130  INFO 10716 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-10 23:00:27.130  INFO 10716 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-10 23:00:27.174  INFO 10716 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-10 23:00:27.175  INFO 10716 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 956 ms
+2019-03-10 23:00:27.535  INFO 10716 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-03-10 23:00:27.578  INFO 10716 --- [restartedMain] c.pactera.gcw.common.CitiesInitializer   : Table GCW_CITY is existing.
+2019-03-10 23:00:27.593  INFO 10716 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-03-10 23:00:27.663  INFO 10716 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-10 23:00:27.671  INFO 10716 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-03-10 23:00:27.693  INFO 10716 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: ServletContext resource [/index.html]
+2019-03-10 23:00:27.806  INFO 10716 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-03-10 23:00:27.808  INFO 10716 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-03-10 23:00:27.816  INFO 10716 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-03-10 23:00:27.882  INFO 10716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2019-03-10 23:00:27.884  INFO 10716 --- [restartedMain] c.p.gcw.GetCurrentWeatherApplication     : Started GetCurrentWeatherApplication in 1.733 seconds (JVM running for 645.891)
+2019-03-10 23:00:27.887  INFO 10716 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-03-10 23:00:29.563  INFO 10716 --- [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-10 23:00:29.571  INFO 10716 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-10 23:00:29.581  INFO 10716 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2019-03-10 23:01:30.439 DEBUG 10716 --- [http-nio-8000-exec-7] c.p.gcw.dao.mapper.GcwCityMapper.insert  : ==>  Preparing: insert into GCW_CITY (CODE, NAME) values (?, ?) 
+2019-03-10 23:01:30.486 DEBUG 10716 --- [http-nio-8000-exec-7] c.p.gcw.dao.mapper.GcwCityMapper.insert  : ==> Parameters: Tianjin(String), Tianjin(String)
+2019-03-10 23:01:30.496 DEBUG 10716 --- [http-nio-8000-exec-7] c.p.gcw.dao.mapper.GcwCityMapper.insert  : <==    Updates: 1
+2019-03-10 23:01:39.949 DEBUG 10716 --- [http-nio-8000-exec-6] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 23:01:39.963 DEBUG 10716 --- [http-nio-8000-exec-6] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 23:01:39.974 DEBUG 10716 --- [http-nio-8000-exec-6] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 7
