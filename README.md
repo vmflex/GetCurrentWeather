@@ -38,6 +38,6 @@ The following is to be continued.
 
 - Application Build Script.  <br/>Currently you can download source code from GitHub and the using command [mvn spring-boot:run] to run the application.
 
-- Docker file<br/>Make a docker image for the application and run it from a component.
+- Docker file<br/>Make a docker image for the application and run it from a container.
 
  
