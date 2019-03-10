@@ -397,3 +397,6 @@
 2019-03-10 23:01:39.949 DEBUG 10716 --- [http-nio-8000-exec-6] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
 2019-03-10 23:01:39.963 DEBUG 10716 --- [http-nio-8000-exec-6] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
 2019-03-10 23:01:39.974 DEBUG 10716 --- [http-nio-8000-exec-6] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 7
+2019-03-10 23:07:38.926 DEBUG 10716 --- [http-nio-8000-exec-4] c.p.g.d.m.GcwCityMapper.selectByExample  : ==>  Preparing: select CODE, NAME from GCW_CITY 
+2019-03-10 23:07:38.927 DEBUG 10716 --- [http-nio-8000-exec-4] c.p.g.d.m.GcwCityMapper.selectByExample  : ==> Parameters: 
+2019-03-10 23:07:38.929 DEBUG 10716 --- [http-nio-8000-exec-4] c.p.g.d.m.GcwCityMapper.selectByExample  : <==      Total: 7
