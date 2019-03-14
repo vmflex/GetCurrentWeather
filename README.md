@@ -40,4 +40,3 @@ The following is to be continued.
 
 - Docker file<br/>Make a docker image for the application and run it from a container.
 
- 
