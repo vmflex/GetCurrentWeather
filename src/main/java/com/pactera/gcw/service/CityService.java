@@ -68,4 +68,13 @@ public class CityService implements ICityService {
         return this.mapper.selectByExample(example);
     }
 
+    @Override
+    public boolean deleteAllCities() {
+        int res = this.mapper.deleteByExample(new GcwCityExample());
+        if (res > 0) {
+            return true;
+        }
+        return false;
+    }
+
 }

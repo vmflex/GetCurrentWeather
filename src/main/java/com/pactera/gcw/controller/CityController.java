@@ -65,4 +65,10 @@ public class CityController {
         return this.service.deleteGcwCity(code);
     }
 
+    @ApiOperation(value = "Delete All Cities.", notes = "Delete all cities.")
+    @RequestMapping(value = "/city/del/all", method = RequestMethod.DELETE)
+    public boolean deleteCity() {
+        return this.service.deleteAllCities();
+    }
+
 }
