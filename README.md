@@ -65,9 +65,13 @@
     CMD java -jar gcw.jar
     ```
 
-  - Execute [**docker build -t GCW-0.0.1 .** ] to create docker image.
+  - Execute [**docker build -t gcw-0.0.1 .** ] to create docker image.
 
-  - Execute [**docker run --name GCW-p 8000:8000 -d GCW-0.0.1**] to run the application
+    ![123](https://user-images.githubusercontent.com/17881238/54420391-d47fbc00-4744-11e9-8815-9c91e5f741c7.png)
+
+  - Execute [**docker run --name gcw -p 8000:8000 -d gcw-0.0.1**] to run the application
+
+  - curl http://localhost:8000
 
 
 
