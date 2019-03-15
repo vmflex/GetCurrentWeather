@@ -2,7 +2,7 @@
 
 ### Description
 
-- This application is to get real-time weather for a specified city. All the weather information is obtained from third-party Weather API called [apixu]. And parse it then display it friendly on a web page.
+- This application is to get real-time weather for a specified city. All the weather information is obtained from third-party Weather API called [apixu]. And parse it then display it friendly on a web page. Once the application is getting deployed, you can see below screen by visiting http://localhost:8080. The city dropdown box can be configured and several cities will be initialized during the application start.
 
   ![55](https://user-images.githubusercontent.com/17881238/54087907-f36ffe00-4392-11e9-95ea-a011a6ec1a90.png)
 
@@ -11,11 +11,28 @@
 ##### １　Framework Design
 
 - SpringBoot with embedded SpringMVC/Spring/Tomcat
+
 - H2 Database to store city information. The H2 is embedded exclusively within the Application and start/stop along with the System. 
+
 - Alibaba Druid is JDBC Connection Tools. And it is integrated to the System to improve performance while connecting to DB.
+
 - Instead of using JDBC directly to touch DB, the application is using MyBatis to improve development efficiency.
+
 - The application is using Swagger to generate Restful Document.
+
 - The application is designed as two parts. One is Java based back-end using DAO->Service->Controller Pattern. And the other part is front-end using JavaScript / Css/ Html. There are no dependency for the two parts. and the two parts is interact with each other by Restful services. and the transfer data format during each interaction is JSON.
+
+- For Test Part, it is using SpringBoot internal Test API.  And as the H2 DB is chosen and is embedded within the application automatically, all test cases for implemented Restful APIs can be run seamlessly without taking care of more details of DB. 
+
+- For  Code Test Coverage,  it is using [JaCoCo] as a Maven plugin. Run below command to generate Code Coverage Report:
+
+  -   mvn clean jacoco:prepare-agent install jacoco:report
+
+  - Alternatively, when packaging/installing the application, then [JaCoCo] will be run automatically.
+
+  - In Report location: target/site/jacoco/, click the index.html, the Coverage Report will be displayed as a Html page as below screen shot shown.
+
+    ![77](https://user-images.githubusercontent.com/17881238/54416830-769aa680-473b-11e9-9dfe-cd9a7fc74b8d.png)
 
 ##### 2　API Design
 
@@ -31,12 +48,26 @@
 
   ![66](https://user-images.githubusercontent.com/17881238/54087908-f36ffe00-4392-11e9-92f7-0a2b7fe8fdb9.png)
 
-### TODO
-The following is to be continued.
+### Deployment
+- As it is a Maven based SpringBoot Application. It can be packaged / installed by using maven commands like [mvn clean package] or [mvn clean install]. A jar file [GetCurrentWeather-0.0.1-SNAPSHOT.jar] would be generated and once inputing [java -jar GetCurrentWeather-0.0.1-SNAPSHOT.jar] command, the application would be run directly.
 
-- Junit Tests based on SpringBoot
+- Deployment by Docker:
 
-- Application Build Script.  <br/>Currently you can download source code from GitHub and the using command [mvn spring-boot:run] to run the application.
+  - In CentOS, create [gcw] folder and upload [GetCurrentWeather-0.0.1-SNAPSHOT.jar] to this folder.
 
-- Docker file<br/>Make a docker image for the application and run it from a container.
+  - Create a Dockerfile 
+
+    ```
+    FROM openjdk:8
+    MAINTAINER vmflex
+    LABEL app="GCW" version="0.0.1" by="vmflex"
+    COPY ./GetCurrentWeather-0.0.1-SNAPSHOT.jar gcw.jar
+    CMD java -jar gcw.jar
+    ```
+
+  - Execute [**docker build -t GCW-0.0.1 .** ] to create docker image.
+
+  - Execute [**docker run --name GCW-p 8000:8000 -d GCW-0.0.1**] to run the application
+
+
 
