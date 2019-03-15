@@ -56,13 +56,33 @@ public class CityControllerTest {
     }
 
     @Test
-    public void testBSaveCity() throws Exception {
+    public void testBSaveCity1() throws Exception {
         MultiValueMap<String, String> map = new LinkedMultiValueMap<>();
         map.add("code", "Shanghai");
         map.add("name", "Shanghai");
         ResponseEntity<GcwCity> response = this.template.postForEntity("/city/save", map, GcwCity.class);
         GcwCity result = response.getBody();
         assertEquals("Shanghai", result.getCode());
+    }
+
+    @Test
+    public void testBSaveCity2() throws Exception {
+        MultiValueMap<String, String> map = new LinkedMultiValueMap<>();
+        map.add("code", "Sydney");
+        map.add("name", "Sydney");
+        ResponseEntity<GcwCity> response = this.template.postForEntity("/city/save", map, GcwCity.class);
+        GcwCity result = response.getBody();
+        assertEquals("Sydney", result.getCode());
+    }
+
+    @Test
+    public void testBSaveCity3() throws Exception {
+        MultiValueMap<String, String> map = new LinkedMultiValueMap<>();
+        map.add("code", "Melbourne");
+        map.add("name", "Melbourne");
+        ResponseEntity<GcwCity> response = this.template.postForEntity("/city/save", map, GcwCity.class);
+        GcwCity result = response.getBody();
+        assertEquals("Melbourne", result.getCode());
     }
 
     @Test

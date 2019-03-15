@@ -103,11 +103,9 @@
 		    <groupId>org.apache.commons</groupId>
 		    <artifactId>commons-lang3</artifactId>
 		</dependency>
-		
 	</dependencies>
 
 	<build>
-	
 		<resources>
 			<resource>
                 <directory>src/main/java</directory>
@@ -160,72 +158,32 @@
 					<mainClass>com.pactera.gcw.GetCurrentWeatherApplication</mainClass>
 				</configuration>
 			</plugin>
-			
-			<plugin>
-		      <groupId>org.apache.maven.plugins</groupId>
-		      <artifactId>maven-surefire-plugin</artifactId>
-		      <configuration>
-		        <!--Test class setting-->
-		        <includes>
-		          <include>******</include>
-		          <include>*ControllerTest</include>
-		        </includes>
-		        <!-- Test Class ignore -->
-		        <excludes>
-		          <exclude>Test*</exclude>
-		        </excludes>
-		        <!-- if skip test-->
-		        <!--<skip>true</skip> -->
-		      </configuration>
-		    </plugin>
-		    
-		    <!-- Build site plugins -->
-		    <plugin>     
-		      <groupId>org.apache.maven.plugins</groupId>
-		      <artifactId>maven-site-plugin</artifactId>
-		      <configuration>
-		        <!-- i18n configuration -->
-		        <locales>zh_CN</locales>
-		        <!-- output charset -->
-		        <outputEncoding>UTF-8</outputEncoding>
-		      </configuration>
-		    </plugin>
-		    
+
 		    <plugin>
 		      <groupId>org.apache.maven.plugins</groupId>
 		      <artifactId>maven-javadoc-plugin</artifactId>
 		    </plugin>
-		    
-		    <plugin>      
-		      <groupId>org.apache.maven.plugins</groupId>
-		      <artifactId>maven-surefire-report-plugin</artifactId>
-		      <version>2.22.1</version>
-		      <configuration>
-		        <showSuccess>false</showSuccess>
-		      </configuration>
-		    </plugin>
-		    
-		    <plugin>      
-		      <groupId>org.codehaus.mojo</groupId>
-		      <artifactId>cobertura-maven-plugin</artifactId>
-		      <version>2.7</version>
-		      <configuration>
-		        <formats>
-		          <format>html</format>
-		          <format>xml</format>
-		        </formats>
-		      </configuration>
-		      <executions>
-		        <execution>
-		          <id>cobertura-report</id>
-		          <goals>
-		            <goal>cobertura</goal>
-		          </goals>
-		          <phase>test</phase>
-		        </execution>
-		      </executions>
-		    </plugin>
+
+		    <plugin>
+			    <groupId>org.jacoco</groupId>
+			    <artifactId>jacoco-maven-plugin</artifactId>
+			    <version>0.8.3</version>
+			    <executions>
+			        <execution>
+			            <id>jacoco-initialize</id>
+			            <goals>
+			                <goal>prepare-agent</goal>
+			            </goals>
+			        </execution>
+			        <execution>
+			            <id>jacoco-site</id>
+			            <phase>package</phase>
+			            <goals>
+			                <goal>report</goal>
+			            </goals>
+			        </execution>
+			    </executions>
+			</plugin>
 		</plugins>
 	</build>
-
 </project>
