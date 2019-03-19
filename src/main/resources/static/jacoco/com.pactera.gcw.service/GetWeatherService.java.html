@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ja"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GetWeatherService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">GetCurrentWeather</a> &gt; <a href="index.source.html" class="el_package">com.pactera.gcw.service</a> &gt; <span class="el_source">GetWeatherService.java</span></div><h1>GetWeatherService.java</h1><pre class="source lang-java linenums">package com.pactera.gcw.service;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.TypeReference;
+import com.pactera.gcw.dao.model.WeatherModel;
+
+@Service
+<span class="fc" id="L20">public class GetWeatherService implements IGetWeatherService {</span>
+
+<span class="fc" id="L22">    private static final Logger logger = LoggerFactory.getLogger(GetWeatherService.class);</span>
+    @Value(&quot;${gcw.url}&quot;)
+    private String gcwUrl;
+
+    @Override
+    public String getWeather(String id) {
+<span class="pc bpc" id="L28" title="2 of 4 branches missed.">        if (id == null || &quot;&quot;.equals(id)) {</span>
+<span class="nc" id="L29">            return &quot;incorrect parameter for weather code.&quot;;</span>
+        }
+
+<span class="fc" id="L32">        InputStream is = null;</span>
+<span class="fc" id="L33">        StringBuffer buf = new StringBuffer();</span>
+        try {
+            //URL url = new URL(this.gcwUrl + id + &quot;.html&quot;);
+<span class="fc" id="L36">            URL url = new URL(this.gcwUrl + id);</span>
+<span class="fc" id="L37">            is = url.openStream();</span>
+<span class="fc" id="L38">            InputStreamReader reader = new InputStreamReader(is, &quot;UTF-8&quot;);</span>
+<span class="fc" id="L39">            char[] cArr = new char[1024];</span>
+<span class="fc" id="L40">            int data = -1;</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">            while ((data = reader.read(cArr, 0, cArr.length)) != -1) {</span>
+<span class="fc" id="L42">                buf.append(cArr, 0, data);</span>
+            }
+
+<span class="nc" id="L45">        } catch (MalformedURLException e) {</span>
+<span class="nc" id="L46">            logger.error(&quot;Fail to get Weather info from {}&quot;, this.gcwUrl, e);</span>
+<span class="nc" id="L47">        } catch (IOException e) {</span>
+<span class="nc" id="L48">            logger.error(&quot;Fail to get Weather info from {}&quot;, this.gcwUrl, e);</span>
+        } finally {
+            try {
+<span class="pc bpc" id="L51" title="1 of 2 branches missed.">                if (is != null) {</span>
+<span class="fc" id="L52">                    is.close();</span>
+                }
+<span class="nc" id="L54">            } catch (IOException e) {</span>
+                    // close it silently
+<span class="fc" id="L56">            }</span>
+
+        }
+<span class="fc" id="L59">        String result = buf.toString();</span>
+
+<span class="fc" id="L61">        System.out.println(result);</span>
+<span class="fc" id="L62">        return result;</span>
+    }
+
+    @Override
+    public WeatherModel getWeatherBean(String id) {
+<span class="nc" id="L67">        String result = this.getWeather(id);</span>
+<span class="nc" id="L68">        JSONObject jobj = JSON.parseObject(result);</span>
+<span class="nc" id="L69">        WeatherModel bean = new WeatherModel();</span>
+<span class="nc bnc" id="L70" title="All 2 branches missed.">        if (jobj.containsKey(&quot;weatherinfo&quot;)) {</span>
+<span class="nc" id="L71">            JSONObject wobj = jobj.getJSONObject(&quot;weatherinfo&quot;);</span>
+<span class="nc" id="L72">            bean = wobj.toJavaObject(new TypeReference&lt;WeatherModel&gt;() {</span>
+            });
+        }
+
+<span class="nc" id="L76">        return bean;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>

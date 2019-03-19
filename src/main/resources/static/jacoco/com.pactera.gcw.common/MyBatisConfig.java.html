@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ja"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MyBatisConfig.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">GetCurrentWeather</a> &gt; <a href="index.source.html" class="el_package">com.pactera.gcw.common</a> &gt; <span class="el_source">MyBatisConfig.java</span></div><h1>MyBatisConfig.java</h1><pre class="source lang-java linenums">package com.pactera.gcw.common;
+
+import java.sql.SQLException;
+import java.util.Properties;
+
+import org.apache.ibatis.plugin.Interceptor;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.mybatis.spring.SqlSessionFactoryBean;
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.core.io.support.ResourcePatternResolver;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.TransactionManagementConfigurer;
+
+import com.github.pagehelper.PageInterceptor;
+
+@Configuration
+<span class="fc" id="L23">public class MyBatisConfig implements TransactionManagementConfigurer{</span>
+    @Autowired
+    private DruidDBConfig druidDBConfig;
+
+    @Bean(name = &quot;sqlSessionFactory&quot;)//3
+    public SqlSessionFactory sqlSessionFactoryBean() {
+<span class="fc" id="L29">        SqlSessionFactoryBean bean = new SqlSessionFactoryBean();</span>
+<span class="fc" id="L30">        bean.setDataSource(druidDBConfig.dataSource());</span>
+        
+        //https://github.com/pagehelper/Mybatis-PageHelper/blob/master/wikis/zh/HowToUse.md
+<span class="fc" id="L33">        Properties properties = new Properties();</span>
+<span class="fc" id="L34">        properties.setProperty(&quot;reasonable&quot;, &quot;true&quot;);</span>
+<span class="fc" id="L35">        properties.setProperty(&quot;supportMethodsArguments&quot;, &quot;true&quot;);</span>
+<span class="fc" id="L36">        properties.setProperty(&quot;returnPageInfo&quot;, &quot;check&quot;);</span>
+<span class="fc" id="L37">        properties.setProperty(&quot;params&quot;, &quot;count=countSql&quot;);</span>
+
+<span class="fc" id="L39">        PageInterceptor intercepter = new PageInterceptor();</span>
+<span class="fc" id="L40">        intercepter.setProperties(properties);</span>
+<span class="fc" id="L41">        bean.setPlugins(new Interceptor[] { intercepter });</span>
+
+<span class="fc" id="L43">        ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();</span>
+        try {
+<span class="fc" id="L45">            bean.setMapperLocations(resolver.getResources(&quot;com/pactera/gcw/dao/**/*Mapper.xml&quot;));</span>
+            //bean.setConfigLocation(resolver.getResource(&quot;classpath:mybatis-config.xml&quot;));
+<span class="fc" id="L47">            return bean.getObject();</span>
+<span class="nc" id="L48">        } catch (Exception e) {</span>
+<span class="nc" id="L49">            e.printStackTrace();</span>
+<span class="nc" id="L50">            throw new RuntimeException(e);</span>
+        }
+    }
+    @Bean
+    public CitiesInitializer citiesInitializer() {
+<span class="fc" id="L55">        CitiesInitializer in = new CitiesInitializer();</span>
+        try {
+<span class="fc" id="L57">            in.init(druidDBConfig.dataSource().getConnection());</span>
+<span class="nc" id="L58">        } catch (SQLException e) {</span>
+<span class="nc" id="L59">            e.printStackTrace();</span>
+<span class="fc" id="L60">        }</span>
+
+<span class="fc" id="L62">        return in;</span>
+    }
+
+    @Bean
+    public SqlSessionTemplate sqlSessionTemplate(SqlSessionFactory sqlSessionFactory) {
+<span class="fc" id="L67">        return new SqlSessionTemplate(sqlSessionFactory);</span>
+    }
+    @Override
+    @Bean
+    @Qualifier(value = &quot;transactionManager&quot;)
+    public PlatformTransactionManager annotationDrivenTransactionManager() {
+<span class="fc" id="L73">        return new DataSourceTransactionManager(druidDBConfig.dataSource());</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>

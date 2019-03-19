@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ja"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DruidDBConfig.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">GetCurrentWeather</a> &gt; <a href="index.source.html" class="el_package">com.pactera.gcw.common</a> &gt; <span class="el_source">DruidDBConfig.java</span></div><h1>DruidDBConfig.java</h1><pre class="source lang-java linenums">package com.pactera.gcw.common;
+
+import java.sql.SQLException;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
+
+import com.alibaba.druid.pool.DruidDataSource;
+
+@Configuration  
+<span class="fc" id="L15">public class DruidDBConfig {  </span>
+ 
+    @Value(&quot;${spring.datasource.url}&quot;)  
+    private String dbUrl;   
+    @Value(&quot;${spring.datasource.username}&quot;)  
+    private String username;  
+    @Value(&quot;${spring.datasource.password}&quot;)  
+    private String password;
+    @Value(&quot;${spring.datasource.driverClassName}&quot;)  
+    private String driverClassName;  
+    @Value(&quot;${spring.datasource.initialSize}&quot;)  
+    private int initialSize;   
+    @Value(&quot;${spring.datasource.minIdle}&quot;)  
+    private int minIdle;  
+    @Value(&quot;${spring.datasource.maxActive}&quot;)  
+    private int maxActive;  
+    @Value(&quot;${spring.datasource.maxWait}&quot;)  
+    private int maxWait;  
+    @Value(&quot;${spring.datasource.timeBetweenEvictionRunsMillis}&quot;)  
+    private int timeBetweenEvictionRunsMillis;  
+    @Value(&quot;${spring.datasource.minEvictableIdleTimeMillis}&quot;)  
+    private int minEvictableIdleTimeMillis;  
+    @Value(&quot;${spring.datasource.validationQuery}&quot;)  
+    private String validationQuery;   
+    @Value(&quot;${spring.datasource.testWhileIdle}&quot;)  
+    private boolean testWhileIdle;  
+    @Value(&quot;${spring.datasource.testOnBorrow}&quot;)  
+    private boolean testOnBorrow;  
+    @Value(&quot;${spring.datasource.testOnReturn}&quot;)  
+    private boolean testOnReturn;  
+    @Value(&quot;${spring.datasource.poolPreparedStatements}&quot;)  
+    private boolean poolPreparedStatements; 
+    @Value(&quot;${spring.datasource.maxPoolPreparedStatementPerConnectionSize}&quot;)  
+    private int maxPoolPreparedStatementPerConnectionSize;  
+    @Value(&quot;${spring.datasource.filters}&quot;)  
+    private String filters;    
+    @Value(&quot;{spring.datasource.connectionProperties}&quot;)  
+    private String connectionProperties;
+    
+    @Primary
+    @Bean(name = &quot;dataSource&quot;, destroyMethod = &quot;close&quot;, initMethod = &quot;init&quot;)
+    public DataSource dataSource(){  
+<span class="fc" id="L57">        DruidDataSource datasource = new DruidDataSource();  </span>
+<span class="fc" id="L58">        datasource.setUrl(this.dbUrl);  </span>
+<span class="fc" id="L59">        datasource.setUsername(username);  </span>
+<span class="fc" id="L60">        datasource.setPassword(password);</span>
+<span class="fc" id="L61">        datasource.setDriverClassName(driverClassName);  </span>
+        //configuration  
+<span class="fc" id="L63">        datasource.setInitialSize(initialSize);  </span>
+<span class="fc" id="L64">        datasource.setMinIdle(minIdle);  </span>
+<span class="fc" id="L65">        datasource.setMaxActive(maxActive);  </span>
+<span class="fc" id="L66">        datasource.setMaxWait(maxWait);  </span>
+<span class="fc" id="L67">        datasource.setTimeBetweenEvictionRunsMillis(timeBetweenEvictionRunsMillis);  </span>
+<span class="fc" id="L68">        datasource.setMinEvictableIdleTimeMillis(minEvictableIdleTimeMillis);  </span>
+<span class="fc" id="L69">        datasource.setValidationQuery(validationQuery);  </span>
+<span class="fc" id="L70">        datasource.setTestWhileIdle(testWhileIdle);  </span>
+<span class="fc" id="L71">        datasource.setTestOnBorrow(testOnBorrow);  </span>
+<span class="fc" id="L72">        datasource.setTestOnReturn(testOnReturn);  </span>
+<span class="fc" id="L73">        datasource.setPoolPreparedStatements(poolPreparedStatements);  </span>
+<span class="fc" id="L74">        datasource.setMaxPoolPreparedStatementPerConnectionSize(maxPoolPreparedStatementPerConnectionSize);  </span>
+        try {  
+<span class="fc" id="L76">            datasource.setFilters(filters);  </span>
+<span class="nc" id="L77">        } catch (SQLException e) {  </span>
+<span class="nc" id="L78">            e.printStackTrace();</span>
+<span class="fc" id="L79">        }  </span>
+<span class="fc" id="L80">        datasource.setConnectionProperties(this.connectionProperties);  </span>
+<span class="fc" id="L81">        return datasource;  </span>
+    }  
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>

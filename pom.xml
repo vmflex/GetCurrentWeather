@@ -177,10 +177,14 @@
 			        </execution>
 			        <execution>
 			            <id>jacoco-site</id>
-			            <phase>package</phase>
+			            <phase>test</phase>
 			            <goals>
 			                <goal>report</goal>
 			            </goals>
+			            <configuration>
+			            	<dataFile>target/jacoco.exec</dataFile>
+			            	<outputDirectory>src/main/resources/static/jacoco</outputDirectory>
+			            </configuration>
 			        </execution>
 			    </executions>
 			</plugin>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ja"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CitiesInitializer.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">GetCurrentWeather</a> &gt; <a href="index.source.html" class="el_package">com.pactera.gcw.common</a> &gt; <span class="el_source">CitiesInitializer.java</span></div><h1>CitiesInitializer.java</h1><pre class="source lang-java linenums">package com.pactera.gcw.common;
+
+import java.sql.Connection;
+import java.sql.DatabaseMetaData;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+<span class="fc" id="L12">public class CitiesInitializer {</span>
+<span class="fc" id="L13">    private static final Logger logger = LoggerFactory.getLogger(CitiesInitializer.class);</span>
+
+    public boolean init(Connection conn) throws SQLException {
+        try {
+<span class="pc bpc" id="L17" title="1 of 2 branches missed.">            if (validateTableExist(conn, &quot;GCW_CITY&quot;)) {</span>
+<span class="fc" id="L18">                logger.info(&quot;Table GCW_CITY is existing. Need to drop it.&quot;);</span>
+                //                Statement statement = conn.createStatement();
+                //                statement.executeUpdate(&quot;Drop table GCW_CITY&quot;);
+                //                statement.close();
+<span class="fc" id="L22">                return true;</span>
+            }
+<span class="nc" id="L24">            Statement statement = conn.createStatement();</span>
+<span class="nc" id="L25">            statement.executeUpdate(</span>
+                    &quot;create table GCW_CITY (code varchar(30) primary key not null, name varchar(50))&quot;);
+<span class="nc" id="L27">            statement.close();</span>
+<span class="nc" id="L28">            logger.info(&quot;Table GCW_CITY is created successfully.&quot;);</span>
+<span class="nc" id="L29">            Statement ins = conn.createStatement();</span>
+<span class="nc" id="L30">            ins.executeUpdate(&quot;insert into GCW_CITY values ('Sydney', 'Sydney')&quot;);</span>
+<span class="nc" id="L31">            ins.executeUpdate(&quot;insert into GCW_CITY values ('Beijing', 'Beijing')&quot;);</span>
+<span class="nc" id="L32">            ins.executeUpdate(&quot;insert into GCW_CITY values ('Melbourne', 'Melbourne')&quot;);</span>
+<span class="nc" id="L33">            ins.executeUpdate(&quot;insert into GCW_CITY values ('London', 'London')&quot;);</span>
+<span class="nc" id="L34">            ins.executeUpdate(&quot;insert into GCW_CITY values ('Tokyo', 'Tokyo')&quot;);</span>
+<span class="nc" id="L35">            ins.close();</span>
+<span class="nc" id="L36">            logger.info(&quot;Five records for GCW_CITY are created.&quot;);</span>
+<span class="nc" id="L37">        } catch (SQLException e) {</span>
+<span class="nc" id="L38">            logger.error(&quot;Failed to verify Table GCW_CITY&quot;, e);</span>
+        } finally {
+<span class="fc" id="L40">            conn.close();</span>
+        }
+
+<span class="nc" id="L43">        return false;</span>
+    }
+
+    public boolean validateTableExist(Connection conn, String tableName) throws SQLException {
+<span class="fc" id="L47">        boolean flag = false;</span>
+<span class="fc" id="L48">        ResultSet rs = null;</span>
+        try {
+<span class="fc" id="L50">            DatabaseMetaData meta = conn.getMetaData();</span>
+<span class="fc" id="L51">            String type[] = { &quot;TABLE&quot; };</span>
+<span class="fc" id="L52">            rs = meta.getTables(null, null, tableName, type);</span>
+<span class="fc" id="L53">            flag = rs.next();</span>
+<span class="nc" id="L54">        } catch (SQLException e) {</span>
+<span class="nc" id="L55">            e.printStackTrace();</span>
+        } finally {
+<span class="pc bpc" id="L57" title="1 of 2 branches missed.">            if (rs != null) {</span>
+<span class="fc" id="L58">                rs.close();</span>
+            }
+        }
+<span class="fc" id="L61">        return flag;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>

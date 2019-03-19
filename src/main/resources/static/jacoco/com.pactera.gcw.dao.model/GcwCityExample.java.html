@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ja"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GcwCityExample.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">GetCurrentWeather</a> &gt; <a href="index.source.html" class="el_package">com.pactera.gcw.dao.model</a> &gt; <span class="el_source">GcwCityExample.java</span></div><h1>GcwCityExample.java</h1><pre class="source lang-java linenums">package com.pactera.gcw.dao.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class GcwCityExample {
+    protected String orderByClause;
+
+    protected boolean distinct;
+
+    protected List&lt;Criteria&gt; oredCriteria;
+
+<span class="fc" id="L13">    public GcwCityExample() {</span>
+<span class="fc" id="L14">        oredCriteria = new ArrayList&lt;Criteria&gt;();</span>
+<span class="fc" id="L15">    }</span>
+
+    public void setOrderByClause(String orderByClause) {
+<span class="nc" id="L18">        this.orderByClause = orderByClause;</span>
+<span class="nc" id="L19">    }</span>
+
+    public String getOrderByClause() {
+<span class="fc" id="L22">        return orderByClause;</span>
+    }
+
+    public void setDistinct(boolean distinct) {
+<span class="nc" id="L26">        this.distinct = distinct;</span>
+<span class="nc" id="L27">    }</span>
+
+    public boolean isDistinct() {
+<span class="fc" id="L30">        return distinct;</span>
+    }
+
+    public List&lt;Criteria&gt; getOredCriteria() {
+<span class="fc" id="L34">        return oredCriteria;</span>
+    }
+
+    public void or(Criteria criteria) {
+<span class="nc" id="L38">        oredCriteria.add(criteria);</span>
+<span class="nc" id="L39">    }</span>
+
+    public Criteria or() {
+<span class="nc" id="L42">        Criteria criteria = createCriteriaInternal();</span>
+<span class="nc" id="L43">        oredCriteria.add(criteria);</span>
+<span class="nc" id="L44">        return criteria;</span>
+    }
+
+    public Criteria createCriteria() {
+<span class="fc" id="L48">        Criteria criteria = createCriteriaInternal();</span>
+<span class="pc bpc" id="L49" title="1 of 2 branches missed.">        if (oredCriteria.size() == 0) {</span>
+<span class="fc" id="L50">            oredCriteria.add(criteria);</span>
+        }
+<span class="fc" id="L52">        return criteria;</span>
+    }
+
+    protected Criteria createCriteriaInternal() {
+<span class="fc" id="L56">        Criteria criteria = new Criteria();</span>
+<span class="fc" id="L57">        return criteria;</span>
+    }
+
+    public void clear() {
+<span class="nc" id="L61">        oredCriteria.clear();</span>
+<span class="nc" id="L62">        orderByClause = null;</span>
+<span class="nc" id="L63">        distinct = false;</span>
+<span class="nc" id="L64">    }</span>
+
+    protected abstract static class GeneratedCriteria {
+        protected List&lt;Criterion&gt; criteria;
+
+        protected GeneratedCriteria() {
+<span class="fc" id="L70">            super();</span>
+<span class="fc" id="L71">            criteria = new ArrayList&lt;Criterion&gt;();</span>
+<span class="fc" id="L72">        }</span>
+
+        public boolean isValid() {
+<span class="pc bpc" id="L75" title="1 of 2 branches missed.">            return criteria.size() &gt; 0;</span>
+        }
+
+        public List&lt;Criterion&gt; getAllCriteria() {
+<span class="nc" id="L79">            return criteria;</span>
+        }
+
+        public List&lt;Criterion&gt; getCriteria() {
+<span class="nc" id="L83">            return criteria;</span>
+        }
+
+        protected void addCriterion(String condition) {
+<span class="nc bnc" id="L87" title="All 2 branches missed.">            if (condition == null) {</span>
+<span class="nc" id="L88">                throw new RuntimeException(&quot;Value for condition cannot be null&quot;);</span>
+            }
+<span class="nc" id="L90">            criteria.add(new Criterion(condition));</span>
+<span class="nc" id="L91">        }</span>
+
+        protected void addCriterion(String condition, Object value, String property) {
+<span class="nc bnc" id="L94" title="All 2 branches missed.">            if (value == null) {</span>
+<span class="nc" id="L95">                throw new RuntimeException(&quot;Value for &quot; + property + &quot; cannot be null&quot;);</span>
+            }
+<span class="nc" id="L97">            criteria.add(new Criterion(condition, value));</span>
+<span class="nc" id="L98">        }</span>
+
+        protected void addCriterion(String condition, Object value1, Object value2, String property) {
+<span class="nc bnc" id="L101" title="All 4 branches missed.">            if (value1 == null || value2 == null) {</span>
+<span class="nc" id="L102">                throw new RuntimeException(&quot;Between values for &quot; + property + &quot; cannot be null&quot;);</span>
+            }
+<span class="nc" id="L104">            criteria.add(new Criterion(condition, value1, value2));</span>
+<span class="nc" id="L105">        }</span>
+
+        public Criteria andCodeIsNull() {
+<span class="nc" id="L108">            addCriterion(&quot;CODE is null&quot;);</span>
+<span class="nc" id="L109">            return (Criteria) this;</span>
+        }
+
+        public Criteria andCodeIsNotNull() {
+<span class="nc" id="L113">            addCriterion(&quot;CODE is not null&quot;);</span>
+<span class="nc" id="L114">            return (Criteria) this;</span>
+        }
+
+        public Criteria andCodeEqualTo(String value) {
+<span class="nc" id="L118">            addCriterion(&quot;CODE =&quot;, value, &quot;code&quot;);</span>
+<span class="nc" id="L119">            return (Criteria) this;</span>
+        }
+
+        public Criteria andCodeNotEqualTo(String value) {
+<span class="nc" id="L123">            addCriterion(&quot;CODE &lt;&gt;&quot;, value, &quot;code&quot;);</span>
+<span class="nc" id="L124">            return (Criteria) this;</span>
+        }
+
+        public Criteria andCodeGreaterThan(String value) {
+<span class="nc" id="L128">            addCriterion(&quot;CODE &gt;&quot;, value, &quot;code&quot;);</span>
+<span class="nc" id="L129">            return (Criteria) this;</span>
+        }
+
+        public Criteria andCodeGreaterThanOrEqualTo(String value) {
+<span class="nc" id="L133">            addCriterion(&quot;CODE &gt;=&quot;, value, &quot;code&quot;);</span>
+<span class="nc" id="L134">            return (Criteria) this;</span>
+        }
+
+        public Criteria andCodeLessThan(String value) {
+<span class="nc" id="L138">            addCriterion(&quot;CODE &lt;&quot;, value, &quot;code&quot;);</span>
+<span class="nc" id="L139">            return (Criteria) this;</span>
+        }
+
+        public Criteria andCodeLessThanOrEqualTo(String value) {
+<span class="nc" id="L143">            addCriterion(&quot;CODE &lt;=&quot;, value, &quot;code&quot;);</span>
+<span class="nc" id="L144">            return (Criteria) this;</span>
+        }
+
+        public Criteria andCodeLike(String value) {
+<span class="nc" id="L148">            addCriterion(&quot;CODE like&quot;, value, &quot;code&quot;);</span>
+<span class="nc" id="L149">            return (Criteria) this;</span>
+        }
+
+        public Criteria andCodeNotLike(String value) {
+<span class="nc" id="L153">            addCriterion(&quot;CODE not like&quot;, value, &quot;code&quot;);</span>
+<span class="nc" id="L154">            return (Criteria) this;</span>
+        }
+
+        public Criteria andCodeIn(List&lt;String&gt; values) {
+<span class="nc" id="L158">            addCriterion(&quot;CODE in&quot;, values, &quot;code&quot;);</span>
+<span class="nc" id="L159">            return (Criteria) this;</span>
+        }
+
+        public Criteria andCodeNotIn(List&lt;String&gt; values) {
+<span class="nc" id="L163">            addCriterion(&quot;CODE not in&quot;, values, &quot;code&quot;);</span>
+<span class="nc" id="L164">            return (Criteria) this;</span>
+        }
+
+        public Criteria andCodeBetween(String value1, String value2) {
+<span class="nc" id="L168">            addCriterion(&quot;CODE between&quot;, value1, value2, &quot;code&quot;);</span>
+<span class="nc" id="L169">            return (Criteria) this;</span>
+        }
+
+        public Criteria andCodeNotBetween(String value1, String value2) {
+<span class="nc" id="L173">            addCriterion(&quot;CODE not between&quot;, value1, value2, &quot;code&quot;);</span>
+<span class="nc" id="L174">            return (Criteria) this;</span>
+        }
+
+        public Criteria andNameIsNull() {
+<span class="nc" id="L178">            addCriterion(&quot;NAME is null&quot;);</span>
+<span class="nc" id="L179">            return (Criteria) this;</span>
+        }
+
+        public Criteria andNameIsNotNull() {
+<span class="nc" id="L183">            addCriterion(&quot;NAME is not null&quot;);</span>
+<span class="nc" id="L184">            return (Criteria) this;</span>
+        }
+
+        public Criteria andNameEqualTo(String value) {
+<span class="nc" id="L188">            addCriterion(&quot;NAME =&quot;, value, &quot;name&quot;);</span>
+<span class="nc" id="L189">            return (Criteria) this;</span>
+        }
+
+        public Criteria andNameNotEqualTo(String value) {
+<span class="nc" id="L193">            addCriterion(&quot;NAME &lt;&gt;&quot;, value, &quot;name&quot;);</span>
+<span class="nc" id="L194">            return (Criteria) this;</span>
+        }
+
+        public Criteria andNameGreaterThan(String value) {
+<span class="nc" id="L198">            addCriterion(&quot;NAME &gt;&quot;, value, &quot;name&quot;);</span>
+<span class="nc" id="L199">            return (Criteria) this;</span>
+        }
+
+        public Criteria andNameGreaterThanOrEqualTo(String value) {
+<span class="nc" id="L203">            addCriterion(&quot;NAME &gt;=&quot;, value, &quot;name&quot;);</span>
+<span class="nc" id="L204">            return (Criteria) this;</span>
+        }
+
+        public Criteria andNameLessThan(String value) {
+<span class="nc" id="L208">            addCriterion(&quot;NAME &lt;&quot;, value, &quot;name&quot;);</span>
+<span class="nc" id="L209">            return (Criteria) this;</span>
+        }
+
+        public Criteria andNameLessThanOrEqualTo(String value) {
+<span class="nc" id="L213">            addCriterion(&quot;NAME &lt;=&quot;, value, &quot;name&quot;);</span>
+<span class="nc" id="L214">            return (Criteria) this;</span>
+        }
+
+        public Criteria andNameLike(String value) {
+<span class="nc" id="L218">            addCriterion(&quot;NAME like&quot;, value, &quot;name&quot;);</span>
+<span class="nc" id="L219">            return (Criteria) this;</span>
+        }
+
+        public Criteria andNameNotLike(String value) {
+<span class="nc" id="L223">            addCriterion(&quot;NAME not like&quot;, value, &quot;name&quot;);</span>
+<span class="nc" id="L224">            return (Criteria) this;</span>
+        }
+
+        public Criteria andNameIn(List&lt;String&gt; values) {
+<span class="nc" id="L228">            addCriterion(&quot;NAME in&quot;, values, &quot;name&quot;);</span>
+<span class="nc" id="L229">            return (Criteria) this;</span>
+        }
+
+        public Criteria andNameNotIn(List&lt;String&gt; values) {
+<span class="nc" id="L233">            addCriterion(&quot;NAME not in&quot;, values, &quot;name&quot;);</span>
+<span class="nc" id="L234">            return (Criteria) this;</span>
+        }
+
+        public Criteria andNameBetween(String value1, String value2) {
+<span class="nc" id="L238">            addCriterion(&quot;NAME between&quot;, value1, value2, &quot;name&quot;);</span>
+<span class="nc" id="L239">            return (Criteria) this;</span>
+        }
+
+        public Criteria andNameNotBetween(String value1, String value2) {
+<span class="nc" id="L243">            addCriterion(&quot;NAME not between&quot;, value1, value2, &quot;name&quot;);</span>
+<span class="nc" id="L244">            return (Criteria) this;</span>
+        }
+    }
+
+    public static class Criteria extends GeneratedCriteria {
+
+        protected Criteria() {
+<span class="fc" id="L251">            super();</span>
+<span class="fc" id="L252">        }</span>
+    }
+
+    public static class Criterion {
+        private String condition;
+
+        private Object value;
+
+        private Object secondValue;
+
+        private boolean noValue;
+
+        private boolean singleValue;
+
+        private boolean betweenValue;
+
+        private boolean listValue;
+
+        private String typeHandler;
+
+        public String getCondition() {
+<span class="nc" id="L273">            return condition;</span>
+        }
+
+        public Object getValue() {
+<span class="nc" id="L277">            return value;</span>
+        }
+
+        public Object getSecondValue() {
+<span class="nc" id="L281">            return secondValue;</span>
+        }
+
+        public boolean isNoValue() {
+<span class="nc" id="L285">            return noValue;</span>
+        }
+
+        public boolean isSingleValue() {
+<span class="nc" id="L289">            return singleValue;</span>
+        }
+
+        public boolean isBetweenValue() {
+<span class="nc" id="L293">            return betweenValue;</span>
+        }
+
+        public boolean isListValue() {
+<span class="nc" id="L297">            return listValue;</span>
+        }
+
+        public String getTypeHandler() {
+<span class="nc" id="L301">            return typeHandler;</span>
+        }
+
+        protected Criterion(String condition) {
+<span class="nc" id="L305">            super();</span>
+<span class="nc" id="L306">            this.condition = condition;</span>
+<span class="nc" id="L307">            this.typeHandler = null;</span>
+<span class="nc" id="L308">            this.noValue = true;</span>
+<span class="nc" id="L309">        }</span>
+
+        protected Criterion(String condition, Object value, String typeHandler) {
+<span class="nc" id="L312">            super();</span>
+<span class="nc" id="L313">            this.condition = condition;</span>
+<span class="nc" id="L314">            this.value = value;</span>
+<span class="nc" id="L315">            this.typeHandler = typeHandler;</span>
+<span class="nc bnc" id="L316" title="All 2 branches missed.">            if (value instanceof List&lt;?&gt;) {</span>
+<span class="nc" id="L317">                this.listValue = true;</span>
+            } else {
+<span class="nc" id="L319">                this.singleValue = true;</span>
+            }
+<span class="nc" id="L321">        }</span>
+
+        protected Criterion(String condition, Object value) {
+<span class="nc" id="L324">            this(condition, value, null);</span>
+<span class="nc" id="L325">        }</span>
+
+        protected Criterion(String condition, Object value, Object secondValue, String typeHandler) {
+<span class="nc" id="L328">            super();</span>
+<span class="nc" id="L329">            this.condition = condition;</span>
+<span class="nc" id="L330">            this.value = value;</span>
+<span class="nc" id="L331">            this.secondValue = secondValue;</span>
+<span class="nc" id="L332">            this.typeHandler = typeHandler;</span>
+<span class="nc" id="L333">            this.betweenValue = true;</span>
+<span class="nc" id="L334">        }</span>
+
+        protected Criterion(String condition, Object value, Object secondValue) {
+<span class="nc" id="L337">            this(condition, value, secondValue, null);</span>
+<span class="nc" id="L338">        }</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>
