@@ -69,9 +69,34 @@
 
     ![123](https://user-images.githubusercontent.com/17881238/54420391-d47fbc00-4744-11e9-8815-9c91e5f741c7.png)
 
-  - Execute [**docker run --name gcw -p 8000:8000 -d gcw-0.0.1**] to run the application
+  - Execute [**docker run --name gcw -p 8000:8000 -d --name gcw gcw-0.0.1**] to run the application
 
   - curl http://localhost:8000
+
+### CI/CD
+
+Once changed source code is committed into Github, the Application will be automatically built / tested /packaged  and deployed into Cloud. Below is the URL to access to the Application.
+
+<http://ec2-18-220-200-176.us-east-2.compute.amazonaws.com:8000/>
+
+- Jenkins Pipeline 
+
+  - Checkout: check out source code from Github [<https://github.com/vmflex/GetCurrentWeather>]
+
+  - Test: Application Junit Test and generate Test Coverage Report.
+
+  - Package: Package the Application as a Jar file.
+
+  - Publish: Publish the jar file and docker build file to remote AWS C2. And build docker image and run the image.
+
+![777](https://user-images.githubusercontent.com/17881238/54689419-76931000-4b5a-11e9-8838-e44f3d14ebc7.png)
+
+​    
+
+
+
+
+
 
 
 
