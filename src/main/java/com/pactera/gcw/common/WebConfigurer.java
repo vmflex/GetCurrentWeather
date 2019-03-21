@@ -17,7 +17,6 @@ import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
 
 @Configuration
 public class WebConfigurer implements WebMvcConfigurer {
-
     @Override
     public void addInterceptors(InterceptorRegistry interceptorRegistry) {
         //interceptorRegistry.addInterceptor(new SignInterceptor()).addPathPatterns("/v1/**");
