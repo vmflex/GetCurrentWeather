@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.pactera.gcw.dao.model.WeatherModel;
+import com.pactera.gcw.exception.GCWException;
 import com.pactera.gcw.service.IGetWeatherService;
 
 import io.swagger.annotations.ApiImplicitParam;
@@ -41,5 +42,14 @@ public class GetWeatherController {
     public WeatherModel getWeatherInfoAsBean(@PathVariable("code") String code) {
         WeatherModel weather = service.getWeatherBean(code);
         return weather;
+    }
+    
+    @RequestMapping(value="/error/{code}", method=RequestMethod.GET)
+    public String errorJson(@PathVariable("code") String code) throws GCWException {
+        if("1".equals(code)) {
+            return "ok";
+        } else {
+            throw new GCWException("Exception is thrown when getting Json.");
+        }
     }
 }

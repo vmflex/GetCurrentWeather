@@ -49,5 +49,4 @@ public class WebConfigurer implements WebMvcConfigurer {
         converters.add(stringConverter());
         converters.add(fastConverter());
     }
-
 }

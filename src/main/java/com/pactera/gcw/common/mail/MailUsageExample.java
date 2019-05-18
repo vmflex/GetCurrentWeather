@@ -11,6 +11,11 @@ public class MailUsageExample {
      * @return void
      */
     public static void main(String[] args) {
+
+
+    }
+
+    public static void test() {
         MailInfo mailInfo = new MailInfo();
         List<String> toList = new ArrayList<String>();
         toList.add("910150090@qq.com");
@@ -40,6 +45,5 @@ public class MailUsageExample {
         MailHelper mp = new MailHelper("smtp.qq.com", "910150090@qq.com", "910150090@qq.com",
                 "rlalvhtqhqilbbjf");
         mp.sendEmail(mailInfo);
-
     }
 }
